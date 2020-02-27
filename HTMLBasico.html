@@ -1,0 +1,25 @@
+<!DOCTYPE html> <!--Con esto indicamos que estamos trabajando con HTML5-->
+
+<html lang="es"> <!--Todo el código html de mi página web irá entre estas etiquetas. A las etiquetas se les pueden dar atributos. En este caso con el atributo lang indicamos al navegador que nos indexe la pagina teniendo en cuenta que está en español-->
+    <head> <!--Lo que haya entre estas etiquetas no será visible en la página. En el head se suele incluir información como las hojas de estilo, archivos javascript internos, iconos, título...-->
+        <title>Esto es lo que aparecerá arriba en la url</title>
+        
+        <meta charset="utf-8"/> <!--Especificamos el formato del texto de nuestra página. Las etiquetas meta recogen metadatos. Son utilizadas por los navegadores-->
+        <meta name="description" content="Página de prueba HTML 5"/> <!--Damos una descripción para que los buscadores categoricen la página-->
+        <meta name="keywords" content="html5, css3, JavaScript, diseño, web"/> <!--Antes esta etiqueta era muy importante-->
+        
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet"/> <!--Con esto podemos indicarle a la hoja de estilos la fuente que queremos utilizar. ANTENCIOOON: en el archivo css también hay que modificar algo-->
+        <link rel="stylesheet" href="style.css"> <!--Referenciamos la hoja de estilos-->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script> <!--COn esto referenciamos las librería de vue.js-->
+        
+    </head>
+
+    <body> <!--La información visible de la página web estará siempre dentro del body-->
+        <header> <!--Suele usarse para añadir tu logo, tus links de navegación...-->
+            <div class="logo-container"> <!--esta etiqueta viene de <<división>>, sirve para crear secciones o agrupar contenidos. Con el atributo class le damos un nombre con el que podrá ser referenciado, por ejemplo, desde el .css-->
+                <img src="./logo.jpg" alt="logo"/>
+            </div>
+        </header>
+    </body>
+</html>

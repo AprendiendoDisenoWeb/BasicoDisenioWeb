@@ -1,0 +1,9 @@
+* {
+    margin: 0px; /*Quitamos los márgenes de todo.*/
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /*ATENCION: podemos indicarle la fuente así gracias a que en el head del html referenciamos la librería desde donde obtener dicha fuente*/
+}
