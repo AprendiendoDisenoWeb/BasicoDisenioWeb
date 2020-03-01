@@ -7,3 +7,8 @@
 body {
     font-family: 'Poppins', sans-serif; /*ATENCION: podemos indicarle la fuente así gracias a que en el head del html referenciamos la librería desde donde obtener dicha fuente*/
 }
+
+header {
+    display: flex; /*Esto coge los elementos y reparte en una línea horizontal*/
+    background: lightblue; /*Es buena idea añadir un color de fondo temporal a cada una de las "cajas" que vamos creando, para saber dónde empiezan, dónde acaban. Cuánto ocupan*/
+}

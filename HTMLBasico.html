@@ -18,7 +18,17 @@
     <body> <!--La información visible de la página web estará siempre dentro del body-->
         <header> <!--Suele usarse para añadir tu logo, tus links de navegación...-->
             <div class="logo-container"> <!--esta etiqueta viene de <<división>>, sirve para crear secciones o agrupar contenidos. Con el atributo class le damos un nombre con el que podrá ser referenciado, por ejemplo, desde el .css-->
-                <img src="./logo.jpg" alt="logo"/>
+                <img src="./logo.png" alt="logo"/>
+            </div>
+            <nav> <!--Donde se suelen poner los links de navegación-->
+                <ul class="nav-links"> <!--ul viene de unordered list. Estos elementos llevarán un punto delante. Si fuese ol(ordered list) llevarían números-->
+                    <li class="nav-link"><a href="#">Specs</a> <!--la a sirve como un link para una url--> </li> <!--Cada elemento de una lista, ya sea ordenada o desordenada-->
+                    <li class="nav-link"><a href="#">Github</a></li>
+                    <li class="nav-link"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <img src="./img/cart.svg" alt="cart"/>
             </div>
         </header>
     </body>
