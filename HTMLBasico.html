@@ -2,7 +2,7 @@
 
 <html lang="es"> <!--Todo el código html de mi página web irá entre estas etiquetas. A las etiquetas se les pueden dar atributos. En este caso con el atributo lang indicamos al navegador que nos indexe la pagina teniendo en cuenta que está en español-->
     <head> <!--Lo que haya entre estas etiquetas no será visible en la página. En el head se suele incluir información como las hojas de estilo, archivos javascript internos, iconos, título...-->
-        <title>Esto es lo que aparecerá arriba junto al logo</title>
+        <title id="Titulo">Esto es lo que aparecerá arriba junto al logo</title>
         
         <meta charset="utf-8"/> <!--Especificamos el formato del texto de nuestra página. Las etiquetas meta recogen metadatos. Son utilizadas por los navegadores-->
         <meta name="description" content="Página de prueba HTML 5"/> <!--Damos una descripción para que los buscadores categoricen la página-->
@@ -18,7 +18,7 @@
 
     <body> <!--La información visible de la página web estará siempre dentro del body-->
         <header> <!--Suele usarse para añadir tu logo, tus links de navegación...-->
-            <div class="logo-container"> <!--esta etiqueta viene de <<división>>, sirve para crear secciones o agrupar contenidos. Con el atributo class le damos un nombre con el que podrá ser referenciado, por ejemplo, desde el .css-->
+            <div id="divDelLogo" class="logo-container"> <!--esta etiqueta viene de <<división>>, sirve para crear secciones o agrupar contenidos. Con el atributo class le damos un nombre con el que podrá ser referenciado, por ejemplo, desde el .css-->
                 <img src="./logo.png" alt="logo"/>
             </div>
             <nav> <!--Donde se suelen poner los links de navegación-->
@@ -33,6 +33,16 @@
             </div>
         </header>
 
+        <div>
+            <h1 id="prueba">Hola soy un documento en HTML</h1>
+        </div>
+
+        <button id="boton">BotonPrueba</button>
+        <button id="boton2">BotonPrueba2</button>
+
+        <p id="parrafo" class="lead">Primer párrafo que entará en el array</p>
+        <p id="parrafo" class="lead">Segundo párrafo que entará en el array</p>
+        
         <script>
             //Variables en javscript (utilizaremos la palabra reservada "var") Por cierto, ahora puedo utilizar // para comentaarios porque estoy dentro de una etiqueta script, luego la sintaxis es la misma que en javascript donde sí se pueden utilizar
             var numero = 78; //No es necesario definir de qué tipo es la variable, igual que en python
@@ -41,6 +51,49 @@
             alert("El valor de la variable es: " + numero + "y la cadena dice: " + texto);
 
             console.log("Esto es lo que aparecerá en la consola"); //Esto sería literalmente un printf, porque lo estaríamos viendo en la consola (en la web: click derecho inspeccionar elemento -> consola)
+
+            var div = document.getElementById("divDelLogo");
+            var titulo = document.getElementById("Titulo"); 
+            var prueba = document.getElementById("prueba");
+            var boton = document.getElementById("boton");
+            var boton2 = document.getElementById("boton2");
+            var parrafos = document.getElementsByClassName("lead"); //Como hay dos párrafos con el mismo nombre de clase "lead", la var parrafos que estamos creando será un array en el que estarán ambos párrafos
+            var todosLosParrafos = document.querySelectorAll('p'); //Con esto creamos un array con todas las etiquetas <p> del documento (se puede utilizar cualquier otra etiqueta)
+            
+            console.log(div);
+            console.log(titulo.innerHTML);//Con .innerHTML accedemos al texto dentro de la etiqueta
+            console.log(titulo);
+            console.log(prueba);
+            console.log(boton);
+            console.log(parrafos); //Con esto debería imprimirse el array como objeto
+            console.log(parrafos[0]) //Con esto se imprime solo el primer párrafo guardado en el array (como objeto)
+            console.log(parrafos[1].innerText); //Con esto imprimimos el texto del segundo párrafo guardado en el array
+
+            //También podemos cambiar lo que pone
+            titulo.innerHTML = "Esta es la nueva frase que va a aparecer";
+            prueba.textContent = "Esto es lo que tiene que aparecer ahora";
+
+            boton.onclick = function()
+            {
+                prueba.style.color = "olive";
+            }
+
+            function cambiarColor()
+            {
+                prueba.style.color = "black";
+            }
+
+            boton2.onclick = cambiarColor; //Tenemos que quitar los paréntesis cuando llamemos a la función para que solo se ejecute cuando realizamos la acción
+
+            //Eventos
+            boton.addEventListener('mouseover', ratonOverButton);
+
+            function ratonOverButton()
+            {
+                console.log("He detectado que has pasado el ratón por encima del botón");
+            }
+
+            //Y modificar otros atributos
 
         </script> <!--La etiqueta script nos sirve para ejecutar código javascript. Por eso en los ataques XSS se pone siempre <script>alert("dasfas")</script>-->
     </body>

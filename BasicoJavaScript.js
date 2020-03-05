@@ -90,3 +90,10 @@ sumaConParametros(14, 102);
 
 //He dejado en la carpeta "Pantallazos importantes" una demostración de cómo puedo llamar
 //desde la consola a una función creada en este archivo javascript, pasándole parámetros y todo
+
+
+
+//Ahora vamos a ver cómo referenciar los objetos dentro del documento html en base a su id
+var divLogo = document.getElementById("divDelLogo");
+
+console.log(divLogo);
