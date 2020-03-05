@@ -1,0 +1,48 @@
+<!DOCTYPE html> <!--Con esto indicamos que estamos trabajando con HTML5-->
+
+<html lang="es"> <!--Todo el código html de mi página web irá entre estas etiquetas. A las etiquetas se les pueden dar atributos. En este caso con el atributo lang indicamos al navegador que nos indexe la pagina teniendo en cuenta que está en español-->
+    <head> <!--Lo que haya entre estas etiquetas no será visible en la página. En el head se suele incluir información como las hojas de estilo, archivos javascript internos, iconos, título...-->
+        <title id="Titulo">Esto es lo que aparecerá arriba junto al logo</title>
+        
+        <meta charset="utf-8"/> <!--Especificamos el formato del texto de nuestra página. Las etiquetas meta recogen metadatos. Son utilizadas por los navegadores-->
+        <meta name="description" content="Página de prueba HTML 5"/> <!--Damos una descripción para que los buscadores categoricen la página-->
+        <meta name="keywords" content="html5, css3, JavaScript, diseño, web"/> <!--Antes esta etiqueta era muy importante-->
+        
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet"/> <!--Con esto podemos indicarle a la hoja de estilos la fuente que queremos utilizar. ANTENCIOOON: en el archivo css también hay que modificar algo-->
+        <link rel="stylesheet" href="style.css"> <!--Referenciamos la hoja de estilos-->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script> <!--COn esto referenciamos las librería de vue.js-->
+    </head>
+
+    <body> <!--La información visible de la página web estará siempre dentro del body-->
+        <header> <!--Suele usarse para añadir tu logo, tus links de navegación...-->
+            <div id="divDelLogo" class="logo-container"> <!--esta etiqueta viene de <<división>>, sirve para crear secciones o agrupar contenidos. Con el atributo class le damos un nombre con el que podrá ser referenciado, por ejemplo, desde el .css-->
+                <img src="./logo.png" alt="logo"/>
+            </div>
+            <nav> <!--Donde se suelen poner los links de navegación-->
+                <ul class="nav-links"> <!--ul viene de unordered list. Estos elementos llevarán un punto delante. Si fuese ol(ordered list) llevarían números-->
+                    <li class="nav-link"><a href="#">Specs</a> <!--la a sirve como un link para una url--> </li> <!--Cada elemento de una lista, ya sea ordenada o desordenada-->
+                    <li class="nav-link"><a href="#">Github</a></li>
+                    <li class="nav-link"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <img src="./img/cart.svg" alt="cart"/>
+            </div>
+        </header>
+
+        <div>
+            <h1 id="prueba">Hola soy un documento en HTML</h1>
+            <h1 id="suma">El resultado de la suma es: </h1>
+        </div>
+
+        <button id="boton">BotonPrueba</button>
+        <button id="boton2">BotonPrueba2</button>
+
+        <p id="parrafo" class="lead">Primer párrafo que entará en el array</p>
+        <p id="parrafo" class="lead">Segundo párrafo que entará en el array</p>
+
+
+        <script src="BasicoJavaScript.js"></script> <!--Así podemos vincular un archivo javascript. Si lo ponemos aquí en el head, cargará antes que la web. Si queremos que primero cargue la web, debemos ponerlo al final de la etiqueta body-->
+    </body>
+</html>
